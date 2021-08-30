@@ -3,6 +3,8 @@ A program to prefetch tiles for offline use in Gmap.Net
 
 GMAP.NET is an open source map control, you can use multiple map sources based on WEB services: Google map, Microsoft BING map ...
 
+![img](https://github.com/javadsadi/gmapCacher/blob/master/screenshot.png)
+
 (mostly copied from Gmap NET Demo source)
 
 https://github.com/radioman/greatmaps/tree/master/Demo.WindowsPresentation
