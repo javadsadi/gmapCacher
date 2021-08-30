@@ -48,6 +48,7 @@
             this.minZoomNum = new System.Windows.Forms.NumericUpDown();
             this.maxZoomNum = new System.Windows.Forms.NumericUpDown();
             this.clearMapBtn = new System.Windows.Forms.Button();
+            this.Mouse_position_lbl = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.minZoomNum)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.maxZoomNum)).BeginInit();
             this.SuspendLayout();
@@ -82,6 +83,7 @@
             this.gmap.Zoom = 0D;
             this.gmap.OnTileLoadComplete += new GMap.NET.TileLoadComplete(this.gmap_OnTileLoadComplete);
             this.gmap.OnMapZoomChanged += new GMap.NET.MapZoomChanged(this.gmap_OnMapZoomChanged);
+            this.gmap.MouseMove += new System.Windows.Forms.MouseEventHandler(this.gmap_MouseMove);
             // 
             // importBtn
             // 
@@ -279,9 +281,20 @@
             this.clearMapBtn.UseVisualStyleBackColor = true;
             this.clearMapBtn.Click += new System.EventHandler(this.clearMapBtn_Click);
             // 
+            // Mouse_position_lbl
+            // 
+            this.Mouse_position_lbl.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.Mouse_position_lbl.AutoSize = true;
+            this.Mouse_position_lbl.Location = new System.Drawing.Point(261, 662);
+            this.Mouse_position_lbl.Name = "Mouse_position_lbl";
+            this.Mouse_position_lbl.Size = new System.Drawing.Size(22, 13);
+            this.Mouse_position_lbl.TabIndex = 143;
+            this.Mouse_position_lbl.Text = "0,0";
+            // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(1022, 708);
+            this.Controls.Add(this.Mouse_position_lbl);
             this.Controls.Add(this.clearMapBtn);
             this.Controls.Add(this.maxZoomNum);
             this.Controls.Add(this.minZoomNum);
@@ -335,6 +348,7 @@
         private System.Windows.Forms.NumericUpDown minZoomNum;
         private System.Windows.Forms.NumericUpDown maxZoomNum;
         private System.Windows.Forms.Button clearMapBtn;
+        private System.Windows.Forms.Label Mouse_position_lbl;
     }
 }
 

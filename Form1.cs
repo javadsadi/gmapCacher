@@ -253,5 +253,14 @@ namespace gmapCacher
         {
             objects.Clear();
         }
+
+        private void gmap_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.None)
+            {
+                PointLatLng mouse_pointer_position = gmap.FromLocalToLatLng(e.X, e.Y);
+                Mouse_position_lbl.Text = string.Format("Lat= {0:0.######}  Long= {1:0.######}", mouse_pointer_position.Lat, mouse_pointer_position.Lng);
+            }
+        }
     }
 }
